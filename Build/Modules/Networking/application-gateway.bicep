@@ -41,11 +41,7 @@ resource network 'Microsoft.Network/applicationGateways@2020-07-01' = {
     }
   }  
   properties: {
-    sku: {
-      name: sku.size
-      tier: sku.tier
-      capacity: sku.capacity
-    }
+    sku: sku
     sslPolicy: {
       policyType: 'Predefined'
       policyName: 'AppGwSslPolicy20170401S'

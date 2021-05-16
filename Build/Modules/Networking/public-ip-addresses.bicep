@@ -20,11 +20,11 @@ resource pip 'Microsoft.Network/publicIPAddresses@2020-07-01' = {
   location: metadata.location
   tags: tags
   sku: {
-    name: 'Standard'
-    tier: 'Regional'
+    name: 'Basic'
+    tier: 'Regional'    
   }
-  properties: {
-    publicIPAllocationMethod: 'Static'
+  properties: {    
+    publicIPAllocationMethod: 'Dynamic'
     publicIPAddressVersion: 'IPv4'
     idleTimeoutInMinutes: 4    
   }
