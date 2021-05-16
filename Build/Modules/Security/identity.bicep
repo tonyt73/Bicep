@@ -21,4 +21,5 @@ resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' 
   location: metadata.location
 }
 
-output identity object = identity
+output id string = identity.id
+output identity object = identity.properties

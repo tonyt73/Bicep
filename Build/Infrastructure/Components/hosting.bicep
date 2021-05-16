@@ -8,6 +8,7 @@ param properties object
 var vmName = 'vm-${metadata.owner}-${metadata.env}-${properties.vm.instance}'
 var rgName = 'rg-${metadata.baseName}-vm-${properties.vm.instance}' // BCP120
 
+// variables
 module rg '../../Modules/Resources/resource-groups.bicep' = {
   name: rgName
   params: {

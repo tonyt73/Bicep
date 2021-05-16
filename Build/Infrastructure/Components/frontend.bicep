@@ -38,7 +38,7 @@ module agw '../../Modules/Networking/application-gateway.bicep' = {
     sku: properties.sku
     backendIp: properties.vnet.backendIp
     subnetId: properties.vnet.subnetId
-    identityId: properties.security.identity.id
+    identityId: properties.security.identityId
     sslCert: properties.security.sslCert
   }
 }

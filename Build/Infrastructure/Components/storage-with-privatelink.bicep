@@ -15,8 +15,8 @@ param metadata object
 param properties object
 
 // variables
-var saName = replace('sa-${metadata.baseName}-files', '-', '')
-var rgName = 'rg-${metadata.baseName}-uploads'
+var saName = replace('sa-${metadata.baseName}-${properties.name}', '-', '')
+var rgName = 'rg-${metadata.baseName}-${properties.name}'
 
 // uploads resource group
 module rg '../../Modules/Resources/resource-groups.bicep' = {

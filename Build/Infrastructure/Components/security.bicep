@@ -51,5 +51,6 @@ module kv '../../Modules/Security/key-vault.bicep' = {
   }
 }
 
+output identityId string = id.outputs.id
 output identity object = id.outputs.identity
 output kvUri string = kv.outputs.kvUri

@@ -27,11 +27,11 @@ resource kv 'Microsoft.KeyVault/vaults@2021-04-01-preview' = {
   location: metadata.location
   tags: tags
   properties: {
-    tenantId: identity.properties.tenantId
+    tenantId: identity.tenantId
     accessPolicies: [
       {
-        tenantId: identity.properties.tenantId
-        objectId: identity.properties.principalId
+        tenantId: identity.tenantId
+        objectId: identity.principalId
         permissions: {
           secrets: [
             'get'
