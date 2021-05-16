@@ -88,33 +88,6 @@ resource vm 'Microsoft.Compute/virtualMachines@2020-12-01' = {
       ]
     }
   }
-  //resource ext 'extensions@2020-12-01' = {
-  //  name: 'serverDsc'
-  //  location: metadata.location
-  //  properties: {
-  //    publisher: 'Microsoft.Powershell'
-  //    type: 'DSC'
-  //    typeHandlerVersion: '2.77'
-  //    autoUpgradeMinorVersion: true
-  //    forceUpdateTag: '2'
-  //    settings: {
-  //      configuration: {
-  //        url: 'https://saaueaimahubdsc.blob.core.windows.net/dsc/ComtracServer.zip'
-  //        script: 'ComtracServer.ps1'
-  //        function: 'ComtracServer'
-  //      }
-  //      configurationArguments: {
-  //        ApiKey: properties.octopus.apiKey
-  //        Environments: properties.octopus.environment
-  //        Roles: properties.octopus.roles
-  //        ServerPort: 10943
-  //      }
-  //    }
-  //    protectedSettings: {
-  //      configurationUrlSasToken: properties.security.storageAccountSasToken
-  //    }
-  //  }
-  //}
 }
 
 output hostIp string = nic.outputs.pip
