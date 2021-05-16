@@ -1,0 +1,46 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "administratorLogin": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/584c3bec-5aa4-454b-8702-76964d4c1c73/resourceGroups/rg-auea-ima-hub-automation/providers/Microsoft.KeyVault/vaults/kv-auea-ima-hub-dsc"
+                },
+                "secretName": "DefaultAdminUsername"
+            }
+        },
+        "administratorLoginPassword": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/584c3bec-5aa4-454b-8702-76964d4c1c73/resourceGroups/rg-auea-ima-hub-automation/providers/Microsoft.KeyVault/vaults/kv-auea-ima-hub-dsc"
+                },
+                "secretName": "DefaultAdminPassword"
+            }
+        },
+        "storageAccountSasToken": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/584c3bec-5aa4-454b-8702-76964d4c1c73/resourceGroups/rg-auea-ima-hub-automation/providers/Microsoft.KeyVault/vaults/kv-auea-ima-hub-dsc"
+                },
+                "secretName": "SASToken"
+            }
+        },
+        "octopusApiKey": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/584c3bec-5aa4-454b-8702-76964d4c1c73/resourceGroups/rg-auea-ima-hub-automation/providers/Microsoft.KeyVault/vaults/kv-auea-ima-hub-dsc"
+                },
+                "secretName": "OctopusApiKey"
+            }
+        },
+        "sslCertPassword": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/584c3bec-5aa4-454b-8702-76964d4c1c73/resourceGroups/rg-auea-ima-hub-automation/providers/Microsoft.KeyVault/vaults/kv-auea-ima-hub-dsc"
+                },
+                "secretName": "sslCertPassword"
+            }
+        }
+    }
+}
